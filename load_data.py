@@ -26,3 +26,5 @@ for time in data['TimeSlot']:
     time_end = datetime.time(int(hours), int(minutes))
     time_slot = TimeSlot(time_begin=time_begin, time_end=time_end)
     time_slot.save()
+
+#test
