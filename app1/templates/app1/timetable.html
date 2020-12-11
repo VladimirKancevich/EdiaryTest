@@ -1,0 +1,23 @@
+{% extends 'app1/base.html' %}
+
+{% block title %}Расписание{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% for day in timetable%}
+  <div class="row">
+    <div class="col text-center"><h4>Расписание на {{day.date}}</h4></div>
+  </div>
+  <table class="table table-bordered table-striped mt-3">
+      <tr><th>№</th><th>Время</th><th>Урок</th><th>Домашнее задание</th></tr>
+      {% for lesson in day.lessons %}
+      <div class=" name-output">
+      <tr>
+        <td>{{lesson.number}}</td><td>{{lesson.time}}</td><td>{{lesson.title}}</td><td>{{lesson.homework}}</td>
+      </tr>
+      </div>
+      {% endfor %}
+  </table>
+    {% endfor %}
+</div>
+{% endblock %}

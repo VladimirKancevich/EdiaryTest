@@ -1,0 +1,38 @@
+.jumbotron {
+  border-radius: 0;
+  background-color: rgb(161, 179, 207);
+  padding: 0px;
+}
+
+.font-size-lg{
+    font-size: large;
+}
+
+h2{
+  color:white
+  margin-top: 2px;
+}
+.btn{
+    border-radius: 0;
+}
+
+.active{
+
+}
+
+body {
+  background: white;
+}
+
+
+.col-sm{
+}
+
+.nav-link{
+    color:yellow;
+}
+
+.container-fluid{
+
+}
+

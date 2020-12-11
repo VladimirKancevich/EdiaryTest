@@ -1,0 +1,24 @@
+{% extends 'app1/base.html' %}
+{% load static %}
+{% block title %}Домашнее задание{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+      <div class="col-2"><button type="button" class="btn btn-outline-dark" onclick="rewindDate('prev')"><<</button></div>
+      <div class="col text-center"><h4>Расписание на {{date}}</h4></div>
+      <div class="col-2"><button type="button" class="btn btn-outline-dark float-right" onclick="rewindDate('next')">>></button></div>
+  </div>
+  <table class="table table-bordered table-striped mt-3">
+      <tr><th>№</th><th>Время</th><th>Урок</th><th>Домашнее задание</th><th>Комментарий преподавателя</th></tr>
+      {% for lesson in timetable %}
+      <div class=" name-output">
+      <tr>
+        <td>{{lesson.number}}</td><td>{{lesson.time}}</td><td>{{lesson.title}}</td><td>{{lesson.homework}}</td><td>{{lesson.comment}}</td>
+      </tr>
+      </div>
+      {% endfor %}
+  </table>
+</div>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'app1/base.html' %}
+
+{% block title %}Оценки{% endblock %}
+
+{% block content %}
+
+<h4>Оценки</h4>
+<table class="table table-bordered">
+{% for el in name %}
+{% for ele in grade %}
+    <div class=" name-output">
+        <tbody>
+        <tr>
+        <td>{{el.name}}</td>
+        <td>{{el.user_class}}</td>
+            <td>{{ele.grade}}</td>
+        </tr>
+        </tbody>
+    </div>
+{%endfor%}
+{%endfor%}
+{% endblock %}
